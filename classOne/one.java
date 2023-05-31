@@ -1,12 +1,17 @@
 package classOne;
 
 import java.text.DecimalFormat;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.Vector;
 
 public class one {
+    Scanner sc = new Scanner(System.in);
+
     public void add() {
         System.out.print("Enter two integer value ");
-        Scanner sc = new Scanner(System.in);
+
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
 
@@ -122,4 +127,73 @@ public class one {
         System.out.println(" number1 " + df.format(x1) + " number2 " + df.format(x2));
         ;
     }
+
+    public void pyramid() {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 3 - 1; i >= 1; i--) {
+            for (int j = 1; j <= 3 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public void squre() {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5 || i == j) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        // for (int i = 3 - 1; i >= 1; i--) {
+        // for (int j = 1; j <= 3 - i; j++) {
+        // System.out.print(" ");
+        // }
+        // for (int j = 1; j <= 2 * i - 1; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+    }
+
+    public void vectorAplication() {
+        Vector<Integer> v = new Vector<>();
+        int[] arr = new int[5];
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+            v.add(arr[i]);
+        }
+        Collections.sort(v);
+        Collections.reverse(v);
+        for (int i : v) {
+            System.out.print(i);
+        }
+        int firstEle = v.firstElement();
+        int lastEle = v.lastElement();
+        int eleAt = v.elementAt(lastEle);
+        boolean cont = v.contains(2);
+        int indOf = v.indexOf(3);
+        System.out.println(firstEle);
+        System.out.println(lastEle);
+        System.out.println(eleAt);
+        System.out.println(cont);
+        System.out.println(indOf);
+
+    }
+
 }
