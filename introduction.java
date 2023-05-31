@@ -13,7 +13,10 @@ public class introduction {
         // o.evenOdd();
         // o.vowelConst();
         // o.largest();
-        o.quadratic();
+        // o.quadratic();
+        // o.pyramid();
+        // o.squre();
+        o.vectorAplication();
     }
 
 }
